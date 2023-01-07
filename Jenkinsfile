@@ -1,10 +1,5 @@
 pipeline {
-//     agent {
-//         docker {
-//             image 'maven:3.8.7-eclipse-temurin-11'
-// //             args '-v C:/Users/Alp/.m2:/root/.m2'
-//         }
-//     }
+    agent { any }
     options {
         skipStagesAfterUnstable()
     }
