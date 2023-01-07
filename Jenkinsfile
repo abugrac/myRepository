@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.8.7-eclipse-temurin-11'
-            args '-v /root/.m2:/root/.m2'
+            args '-v C:/Users/Alp/.m2:/root/.m2'
         }
     }
     options {
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                echo 'deliver stage'
             }
         }
     }
